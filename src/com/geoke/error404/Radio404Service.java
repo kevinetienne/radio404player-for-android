@@ -19,7 +19,7 @@ public class Radio404Service extends Service {
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
 		startPlayer();
-		return super.onStartCommand(intent, flags, startId);
+		return START_NOT_STICKY;
 	}
 	
 	private void startPlayer() {
