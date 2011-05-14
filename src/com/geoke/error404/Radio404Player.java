@@ -1,9 +1,7 @@
 package com.geoke.error404;
 
-import java.io.IOException;
-
 import android.app.Activity;
-import android.media.MediaPlayer;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -13,6 +11,7 @@ public class Radio404Player extends Activity {
 	// widget
     private View mStartButton;
 	private View mStopButton;
+	protected Intent mIntent;
 
 	/** Called when the activity is first created. */
     @Override
@@ -33,7 +32,8 @@ public class Radio404Player extends Activity {
 		
 		@Override
 		public void onClick(View v) {
-
+			mIntent = new Intent(Radio404Player.this,Radio404Service.class);
+			startService(mIntent);
 		}
 	};
 	
@@ -41,7 +41,8 @@ public class Radio404Player extends Activity {
 		
 		@Override
 		public void onClick(View v) {
-			
+			mIntent = new Intent(Radio404Player.this,Radio404Service.class);
+			stopService(mIntent);
 		}
 	};
 }
