@@ -13,9 +13,6 @@ public class Radio404Player extends Activity {
 	// widget
     private View mStartButton;
 	private View mStopButton;
-	
-	private final String f = "http://radio404.org:8000";
-	MediaPlayer mp = new MediaPlayer();
 
 	/** Called when the activity is first created. */
     @Override
@@ -36,29 +33,7 @@ public class Radio404Player extends Activity {
 		
 		@Override
 		public void onClick(View v) {
-		    try {
-				mp.setDataSource(f);
-			} catch (IllegalArgumentException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IllegalStateException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		    try {
-				mp.prepare();
-			} catch (IllegalStateException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		    mp.start();
-			
+
 		}
 	};
 	
@@ -66,7 +41,6 @@ public class Radio404Player extends Activity {
 		
 		@Override
 		public void onClick(View v) {
-			mp.stop();
 			
 		}
 	};
