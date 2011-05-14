@@ -52,7 +52,8 @@ public class Radio404Service extends Service implements OnPreparedListener {
 	}
 
 	private void stopPlayer() {
-		mp.stop();
+		if (mp != null)
+			mp.stop();
 		isPlaying = false;
 	}
 
