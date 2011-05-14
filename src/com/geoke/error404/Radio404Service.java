@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import android.app.Service;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnPreparedListener;
 import android.os.IBinder;
@@ -46,6 +47,7 @@ public class Radio404Service extends Service implements OnPreparedListener {
 			e.printStackTrace();
 		}
 		mp.setOnPreparedListener(this);
+		mp.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
 		isPlaying = true;
 
