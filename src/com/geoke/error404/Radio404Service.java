@@ -45,11 +45,13 @@ public class Radio404Service extends Service {
 			e.printStackTrace();
 		}
 	    mp.start();
+	    isPlaying = true;
 		
 	}
 	
 	private void stopPlayer() {
 		mp.stop();
+		isPlaying = false;
 	}
 
 	@Override
