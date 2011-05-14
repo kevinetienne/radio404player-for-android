@@ -47,10 +47,14 @@ public class Radio404Service extends Service {
 	    mp.start();
 		
 	}
+	
+	private void stopPlayer() {
+		mp.stop();
+	}
 
 	@Override
 	public void onDestroy() {
-		// TODO Auto-generated method stub
+		stopPlayer();
 		super.onDestroy();
 	}
 
