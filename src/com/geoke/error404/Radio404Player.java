@@ -30,7 +30,6 @@ public class Radio404Player extends Activity {
     
     private OnClickListener startClickListener = new OnClickListener() {
 		
-		@Override
 		public void onClick(View v) {
 			mIntent = new Intent(Radio404Player.this,Radio404Service.class);
 			startService(mIntent);
@@ -39,7 +38,6 @@ public class Radio404Player extends Activity {
 	
 	private OnClickListener stopClickListener = new OnClickListener() {
 		
-		@Override
 		public void onClick(View v) {
 			mIntent = new Intent(Radio404Player.this,Radio404Service.class);
 			stopService(mIntent);

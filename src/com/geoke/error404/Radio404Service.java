@@ -71,7 +71,6 @@ public class Radio404Service extends Service implements OnPreparedListener {
 		return null;
 	}
 
-	@Override
 	public void onPrepared(MediaPlayer mp) {
 		startAudio();		
 	}
