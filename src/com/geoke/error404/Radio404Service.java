@@ -2,6 +2,8 @@ package com.geoke.error404;
 
 import java.io.IOException;
 
+import android.app.Notification;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.media.AudioManager;
@@ -17,6 +19,7 @@ public class Radio404Service extends Service implements OnPreparedListener {
 	MediaPlayer mp = new MediaPlayer();
 	// indicator
 	private Boolean isPlaying = false;
+	private Notification myNotification;
 
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
@@ -51,12 +54,31 @@ public class Radio404Service extends Service implements OnPreparedListener {
 
 		isPlaying = true;
 
+		myNotification = new Notification(android.R.drawable.ic_dialog_info,
+				"Radio404 is playing",
+				System.currentTimeMillis());
+
+		Intent i = new Intent(this, Radio404Player.class);
+
+		i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
+				| Intent.FLAG_ACTIVITY_SINGLE_TOP);
+
+		PendingIntent pi = PendingIntent.getActivity(this, 0, i, 0);
+
+		myNotification.setLatestEventInfo(this, "Radio404",
+				"Now playing",
+				pi);
+		myNotification.flags|=Notification.FLAG_NO_CLEAR;
+
+		startForeground(R.string.app_name, myNotification);
+
 	}
 
 	private void stopPlayer() {
 		if (mp != null)
 			mp.stop();
 		isPlaying = false;
+		stopForeground(true);
 	}
 
 	@Override
@@ -72,12 +94,11 @@ public class Radio404Service extends Service implements OnPreparedListener {
 	}
 
 	public void onPrepared(MediaPlayer mp) {
-		startAudio();		
+		startAudio();
 	}
 
 	private void startAudio() {
 		mp.start();
-
 	}
 
 }
