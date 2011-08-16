@@ -49,6 +49,8 @@ public class Radio404Service extends Service implements OnPreparedListener {
 		}
 		try {
 			mp.prepare();
+			idInfo = R.string.now_playing;
+			idTitleInfo = R.string.title_now_playing;
 		} catch (IllegalStateException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -98,8 +100,6 @@ public class Radio404Service extends Service implements OnPreparedListener {
 	}
 
 	public void onPrepared(MediaPlayer mp) {
-		idInfo = R.string.now_playing;
-		idTitleInfo = R.string.title_now_playing;
 		startAudio();
 	}
 
