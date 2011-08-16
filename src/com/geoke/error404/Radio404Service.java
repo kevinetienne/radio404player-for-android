@@ -20,6 +20,10 @@ public class Radio404Service extends Service implements OnPreparedListener {
 	// indicator
 	private Boolean isPlaying = false;
 	private Notification myNotification;
+	
+	// references to strings for notification
+	private int idInfo;
+	private int idTitleInfo;
 
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
@@ -28,6 +32,9 @@ public class Radio404Service extends Service implements OnPreparedListener {
 	}
 
 	private void startPlayer() {
+		idInfo = R.string.not_playing;
+		idTitleInfo = R.string.title_not_playing;
+
 		try {
 			mp.setDataSource(f);
 		} catch (IllegalArgumentException e) {
@@ -45,17 +52,14 @@ public class Radio404Service extends Service implements OnPreparedListener {
 		} catch (IllegalStateException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} catch (IOException e) {			
 			e.printStackTrace();
 		}
 		mp.setOnPreparedListener(this);
 		mp.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
-		isPlaying = true;
-
 		myNotification = new Notification(android.R.drawable.ic_dialog_info,
-				"Radio404 is playing",
+				getString(idTitleInfo),
 				System.currentTimeMillis());
 
 		Intent i = new Intent(this, Radio404Player.class);
@@ -64,9 +68,9 @@ public class Radio404Service extends Service implements OnPreparedListener {
 				| Intent.FLAG_ACTIVITY_SINGLE_TOP);
 
 		PendingIntent pi = PendingIntent.getActivity(this, 0, i, 0);
-
+		
 		myNotification.setLatestEventInfo(this, "Radio404",
-				"Now playing",
+				getString(idInfo),
 				pi);
 		myNotification.flags|=Notification.FLAG_NO_CLEAR;
 
@@ -94,6 +98,8 @@ public class Radio404Service extends Service implements OnPreparedListener {
 	}
 
 	public void onPrepared(MediaPlayer mp) {
+		idInfo = R.string.now_playing;
+		idTitleInfo = R.string.title_now_playing;
 		startAudio();
 	}
 
