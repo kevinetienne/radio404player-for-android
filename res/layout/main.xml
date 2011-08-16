@@ -1,25 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/background"
     >
-	<TextView  
-	    android:layout_width="fill_parent" 
-	    android:layout_height="wrap_content" 
-	    android:text="@string/app_name"
-	    />
+    <ImageView 
+    	android:id="@+id/imageRadio404"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_marginBottom="10sp"
+    	android:src="@drawable/radio404"
+    	/>
 	<Button
 		android:id="@+id/start404"
-		android:layout_width="wrap_content"
+		android:background="@drawable/blue_button"
+		android:layout_below="@id/imageRadio404"
+		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
+		android:layout_marginLeft="15sp"
+		android:layout_marginRight="15sp"
+		android:layout_marginBottom="10sp"
 		android:text="@string/start_button"
+		android:textColor="@color/background"
+		android:textSize="20sp"
+		android:textStyle="bold"
+		
 		/>
 	<Button
 		android:id="@+id/stop404"
-		android:layout_width="wrap_content"
+		android:background="@drawable/blue_button"
+		android:layout_below="@id/start404"
+		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
+		android:layout_marginLeft="15sp"
+		android:layout_marginRight="15sp"
 		android:text="@string/stop_button"
+		android:textColor="@color/background"
+		android:textSize="20sp"
+		android:textStyle="bold"
 		/>
-</LinearLayout>
+
+	<ImageView 
+		android:id="@+id/image404"
+        android:layout_below="@id/image404"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+       	android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+    	android:src="@drawable/image404"
+    	/>
+   
+    <TextView 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/legal"
+    	android:layout_above="@id/image404"
+        />
+</RelativeLayout>
