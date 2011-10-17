@@ -27,6 +27,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewParent;
+import android.view.Window;
 import android.widget.ImageButton;
 
 public class Radio404Player extends Activity {
@@ -40,7 +41,10 @@ public class Radio404Player extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);             
         setContentView(R.layout.main);
+        getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.mytitle); 
         
         // change title bar
         View titleView = getWindow().findViewById(android.R.id.title);
