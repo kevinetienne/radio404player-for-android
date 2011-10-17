@@ -85,6 +85,15 @@
 				/>
 		</LinearLayout>
 	</LinearLayout>
+	<View
+		android:id="@+id/verticalSeparationMiddle" 
+    	android:layout_width="fill_parent" 
+    	android:layout_height="2dp" 
+    	android:layout_below="@id/InnerRelativeLayoutForButton"
+    	android:background="#000"
+    	android:layout_marginBottom="0sp"
+    	android:layout_marginTop="0sp"
+    /> 
 	<ImageView 
 		android:id="@+id/image404"
         android:layout_below="@id/image404"

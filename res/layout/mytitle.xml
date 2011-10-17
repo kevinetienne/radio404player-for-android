@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:id="@+id/myTitle"
-  android:text="This is my new title"
-  android:layout_width="fill_parent"
-  android:layout_height="fill_parent"
-  android:textColor="@color/titletextcolor"
-   />
+<RelativeLayout android:id="@+id/header"
+        		xmlns:android="http://schemas.android.com/apk/res/android"
+        		android:layout_height="wrap_content" android:layout_width="fill_parent"
+        		android:background="#555555">
+				<TextView
+				  xmlns:android="http://schemas.android.com/apk/res/android"
+				  android:id="@+id/myTitle"
+				  android:textStyle="bold"
+				  android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+				  android:textColor="@color/titletextcolor"
+				  android:gravity="center_vertical"
+				  android:textSize="20px"
+				  android:layout_alignParentRight="true"
+				  android:text="Radio404"
+				  android:padding="9dip"
+				  android:layout_margin="5dip"
+				  android:background="#000000"
+				   />
+  </RelativeLayout>
