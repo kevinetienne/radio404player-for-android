@@ -4,6 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/background"
+    android:padding="5sp"
     >
     <LinearLayout 
         android:id="@+id/InnerRelativeLayout"
@@ -37,6 +38,12 @@
     			/>
     	</LinearLayout>
     </LinearLayout>
+<View 
+    android:layout_width="fill_parent" 
+    android:layout_height="2dp" 
+    android:layout_below="@id/InnerRelativeLayout"
+    android:background="#000"
+    /> 
 	<Button
 		android:id="@+id/start404"
 		android:background="@drawable/blue_button"
