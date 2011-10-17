@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Radio 404</string>
-    <string name="start_button">Start</string>
-    <string name="stop_button">Stop</string>
-    <string name="legal">Radio stream and images are copyright of erreur404.org</string>
-    
-    <string name="title_not_playing">Radio404 - error</string>
-    <string name="title_now_playing">Radio404 - now playing</string>
-    <string name="not_playing">Connection problem - not playing</string>
-    <string name="now_playing">Now playing</string>
+	<string name="app_name">Radio 404</string>
+	<string name="start_button">Start</string>
+	<string name="stop_button">Stop</string>
+	<string name="legal">Radio stream and images are copyright of
+		erreur404.org - Design copyright celine@smklk.fr</string>
+
+	<string name="title_not_playing">Radio404 - error</string>
+	<string name="title_now_playing">Radio404 - now playing</string>
+	<string name="not_playing">Connection problem - not playing</string>
+	<string name="now_playing">Now playing</string>
 </resources>
