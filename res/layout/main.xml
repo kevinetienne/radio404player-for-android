@@ -47,26 +47,43 @@
     /> 
     <LinearLayout 
         android:id="@+id/InnerRelativeLayoutForButton"
+        android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/verticalSeparationTop"
 		>
-		<ImageButton
-			android:id="@+id/start404"
-			android:background="@drawable/play"
-        	android:layout_width="0dip"
-        	android:layout_height="fill_parent"
-        	android:layout_weight="1" 
-			android:layout_marginRight="10sp"
-			/>
-		<ImageButton
-			android:id="@+id/stop404"
-			android:background="@drawable/stop"
+    	<LinearLayout
         	android:layout_width="0dip"
         	android:layout_height="fill_parent"
         	android:layout_weight="1"
-			android:layout_marginRight="10sp"
-			/>
+    		>		
+			<ImageButton
+				android:id="@+id/start404"
+				android:src="@drawable/play"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_marginLeft="5sp"
+        		android:layout_marginRight="5sp"
+        		android:scaleType="fitCenter"
+        		android:background="#fff"
+				/>
+		</LinearLayout>
+    	<LinearLayout
+        	android:layout_width="0dip"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="1"
+    		>
+			<ImageButton
+				android:id="@+id/stop404"
+				android:src="@drawable/stop"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_marginLeft="5sp"
+        		android:layout_marginRight="5sp"
+        		android:scaleType="fitCenter"
+        		android:background="#fff"
+				/>
+		</LinearLayout>
 	</LinearLayout>
 	<ImageView 
 		android:id="@+id/image404"
