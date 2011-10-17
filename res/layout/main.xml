@@ -38,16 +38,22 @@
     			/>
     	</LinearLayout>
     </LinearLayout>
-<View 
-    android:layout_width="fill_parent" 
-    android:layout_height="2dp" 
-    android:layout_below="@id/InnerRelativeLayout"
-    android:background="#000"
+	<View
+		android:id="@+id/verticalSeparationTop" 
+    	android:layout_width="fill_parent" 
+    	android:layout_height="2dp" 
+    	android:layout_below="@id/InnerRelativeLayout"
+    	android:background="#000"
     /> 
+    <LinearLayout 
+        android:id="@+id/InnerRelativeLayoutForButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/verticalSeparationTop"
+		>
 	<Button
 		android:id="@+id/start404"
 		android:background="@drawable/blue_button"
-		android:layout_below="@id/InnerRelativeLayout"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:layout_marginLeft="15sp"
@@ -71,7 +77,7 @@
 		android:textSize="20sp"
 		android:textStyle="bold"
 		/>
-
+	</LinearLayout>
 	<ImageView 
 		android:id="@+id/image404"
         android:layout_below="@id/image404"
