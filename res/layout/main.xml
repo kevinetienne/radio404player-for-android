@@ -51,32 +51,32 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/verticalSeparationTop"
 		>
-	<Button
-		android:id="@+id/start404"
-		android:background="@drawable/blue_button"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:layout_marginLeft="15sp"
-		android:layout_marginRight="15sp"
-		android:layout_marginBottom="10sp"
-		android:text="@string/start_button"
-		android:textColor="@color/background"
-		android:textSize="20sp"
-		android:textStyle="bold"
-		/>
-	<Button
-		android:id="@+id/stop404"
-		android:background="@drawable/blue_button"
-		android:layout_below="@id/start404"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:layout_marginLeft="15sp"
-		android:layout_marginRight="15sp"
-		android:text="@string/stop_button"
-		android:textColor="@color/background"
-		android:textSize="20sp"
-		android:textStyle="bold"
-		/>
+		<Button
+			android:id="@+id/start404"
+			android:background="@drawable/blue_button"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="15sp"
+			android:layout_marginRight="15sp"
+			android:layout_marginBottom="10sp"
+			android:text="@string/start_button"
+			android:textColor="@color/background"
+			android:textSize="20sp"
+			android:textStyle="bold"
+			/>
+		<Button
+			android:id="@+id/stop404"
+			android:background="@drawable/blue_button"
+			android:layout_below="@id/start404"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="15sp"
+			android:layout_marginRight="15sp"
+			android:text="@string/stop_button"
+			android:textColor="@color/background"
+			android:textSize="20sp"
+			android:textStyle="bold"
+			/>
 	</LinearLayout>
 	<ImageView 
 		android:id="@+id/image404"
