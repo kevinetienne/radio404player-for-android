@@ -5,17 +5,42 @@
     android:layout_height="fill_parent"
     android:background="@color/background"
     >
-    <ImageView 
-    	android:id="@+id/imageRadio404"
-    	android:layout_width="wrap_content"
-    	android:layout_height="wrap_content"
-    	android:layout_marginBottom="10sp"
-    	android:src="@drawable/radio404"
-    	/>
+    <LinearLayout 
+        android:id="@+id/InnerRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		>
+    	<ImageView 
+    		android:id="@+id/imageRadio404"
+        	android:layout_width="0dip"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="3"    		
+    		android:layout_marginBottom="10sp"
+    		android:layout_marginRight="15sp"
+    		android:src="@drawable/radio404"
+    		/>
+    	<LinearLayout
+        	android:layout_width="0dip"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="2"
+    		>
+    		<ImageView 
+    			android:id="@+id/imageRadioAndNews"
+        		android:layout_width="0dip"
+        		android:layout_height="wrap_content"
+        		android:layout_weight="1"
+        		android:layout_gravity="bottom"
+    			android:src="@drawable/radioandnews"
+    			android:layout_marginBottom="20sp"
+    			android:layout_marginRight="10sp"
+    			android:layout_toRightOf="@id/imageRadio404"
+    			/>
+    	</LinearLayout>
+    </LinearLayout>
 	<Button
 		android:id="@+id/start404"
 		android:background="@drawable/blue_button"
-		android:layout_below="@id/imageRadio404"
+		android:layout_below="@id/InnerRelativeLayout"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:layout_marginLeft="15sp"
@@ -25,7 +50,6 @@
 		android:textColor="@color/background"
 		android:textSize="20sp"
 		android:textStyle="bold"
-		
 		/>
 	<Button
 		android:id="@+id/stop404"
