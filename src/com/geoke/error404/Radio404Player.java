@@ -27,12 +27,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewParent;
+import android.widget.ImageButton;
 
 public class Radio404Player extends Activity {
 	
 	// widget
-    private View mStartButton;
-	private View mStopButton;
+    private ImageButton mStartButton;
+	private ImageButton mStopButton;
 	protected Intent mIntent;
 
 	/** Called when the activity is first created. */
@@ -52,8 +53,8 @@ public class Radio404Player extends Activity {
         }
 
         // find view
-        mStartButton = findViewById(R.id.start404);
-        mStopButton = findViewById(R.id.stop404);
+        mStartButton = (ImageButton) findViewById(R.id.start404);
+        mStopButton = (ImageButton) findViewById(R.id.stop404);
         
         // assign click listener
         mStartButton.setOnClickListener(startClickListener);
