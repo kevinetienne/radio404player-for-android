@@ -16,7 +16,6 @@
         	android:layout_width="0dip"
         	android:layout_height="fill_parent"
         	android:layout_weight="3"    		
-    		android:layout_marginBottom="10sp"
     		android:layout_marginRight="15sp"
     		android:src="@drawable/radio404"
     		/>
@@ -32,7 +31,6 @@
         		android:layout_weight="1"
         		android:layout_gravity="bottom"
     			android:src="@drawable/radioandnews"
-    			android:layout_marginBottom="20sp"
     			android:layout_marginRight="10sp"
     			android:layout_toRightOf="@id/imageRadio404"
     			/>
@@ -44,6 +42,8 @@
     	android:layout_height="2dp" 
     	android:layout_below="@id/InnerRelativeLayout"
     	android:background="#000"
+    	android:layout_marginBottom="10sp"
+    	android:layout_marginTop="10sp"
     /> 
     <LinearLayout 
         android:id="@+id/InnerRelativeLayoutForButton"
@@ -51,31 +51,21 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/verticalSeparationTop"
 		>
-		<Button
+		<ImageButton
 			android:id="@+id/start404"
-			android:background="@drawable/blue_button"
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:layout_marginLeft="15sp"
-			android:layout_marginRight="15sp"
-			android:layout_marginBottom="10sp"
-			android:text="@string/start_button"
-			android:textColor="@color/background"
-			android:textSize="20sp"
-			android:textStyle="bold"
+			android:background="@drawable/play"
+        	android:layout_width="0dip"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="1" 
+			android:layout_marginRight="10sp"
 			/>
-		<Button
+		<ImageButton
 			android:id="@+id/stop404"
-			android:background="@drawable/blue_button"
-			android:layout_below="@id/start404"
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:layout_marginLeft="15sp"
-			android:layout_marginRight="15sp"
-			android:text="@string/stop_button"
-			android:textColor="@color/background"
-			android:textSize="20sp"
-			android:textStyle="bold"
+			android:background="@drawable/stop"
+        	android:layout_width="0dip"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="1"
+			android:layout_marginRight="10sp"
 			/>
 	</LinearLayout>
 	<ImageView 
